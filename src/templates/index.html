@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Restaurant Apps Starter Project</title>
-</head>
-<body>
-<h1>Restaurant Apps Starter Project</h1>
-<p>Hallo coders! Anda berhasil menjalankan starter project.</p>
-<p>Jangan lupa untuk menggunakan salah satu gambar yang berada pada ./images/heros sebagai background hero elemen</p>
-<img src="./images/heros/hero-image_1.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_2.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_3.jpg" width="450" alt="">
-<img src="./images/heros/hero-image_4.jpg" width="450" alt="">
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Box</title>
+  </head>
+  <body>
+    <a href="#main-content"> Menuju Ke Kontent</a>
+
+    <!-- start header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="mobile-menu">
+          <div class="navbar__brand">
+            <a href="/" class="navbar__brand__logo">Restourant Box<span class="logo__dot">.</span></a>
+          </div>
+          <div class="menu-container">
+            <div id="bars-toggler">
+              <button type="button" class="menu" type="button">
+                <i class="fas fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <ul class="nav-list">
+          <li><a href="/" class="nav-item">Home</a></li>
+          <li><a href="#" class="nav-item">Favorite</a></li>
+          <li><a href="http://github.com/ilzamafif" target="_blank" class="nav-item">About Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- start hero -->
+      <div class="hero">
+        <div class="hero__inner" tabindex="0">
+          <div class="hero__title">Explore the restaurant</div>
+          <div class="hero__tagline">You will feel pleasure that you have never felt</div>
+          <a href="#main-content" class="btn">Jelajahi Restaurant</a>
+        </div>
+      </div>
+      <!-- end hero -->
+    </header>
+
+    <!-- end header -->
+
+    <!-- start contnet -->
+    <main id="main-content">
+      <section class="list">
+        <h2 class="list__label">Restourant List</h2>
+        <div class="posts"></div>
+      </section>
+    </main>
+    <!-- end content -->
+
+    <!-- start footer -->
+    <footer class="footer">
+      <p>Copywrite @2021 All Right Reserved | Made by <a href="#">Ilzam Afif</a></p>
+    </footer>
+    <!-- end content -->
+  </body>
 </html>
