@@ -1,5 +1,6 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
+import "../styles/responsive.css";
 
 fetch("DATA.JSON")
   .then((respose) => respose.json())
@@ -32,4 +33,12 @@ function restaurantList(result) {
   });
 
   document.querySelector("#posts").innerHTML = restaurant;
+
+  document.querySelector(".bars-toggler").addEventListener("click", function () {
+    document.querySelector(".nav-list").classList.toggle("nav-block");
+  });
+
+  document.querySelector(".nav-list").addEventListener("click", function () {
+    document.querySelector(".nav-list").classList.remove("nav-block");
+  });
 }

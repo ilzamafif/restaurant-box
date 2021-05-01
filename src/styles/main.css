@@ -50,7 +50,7 @@ nav {
   display: flex;
   padding-left: 0;
   list-style: none;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 
 .nav-item {
