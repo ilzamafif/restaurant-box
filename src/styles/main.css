@@ -15,7 +15,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--color-text);
   font-size: 14px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* 
@@ -195,7 +195,7 @@ nav {
 
 .card-content {
   line-height: 1.5;
-  font-size: 0.8rem;
+  font-size: 1rem;
   padding: 15px;
 }
 
@@ -205,6 +205,7 @@ nav {
 */
 
 .footer {
+  margin-top: 1.4rem;
   height: 3rem;
   width: 100%;
   background-color: var(--color-secondary);
@@ -213,6 +214,7 @@ nav {
 }
 
 .footer p {
+  margin: 0 auto;
   color: var(--color-text);
   font-size: 1rem;
   line-height: 3rem;
@@ -222,7 +224,7 @@ nav {
   position: absolute;
   top: -50rem;
   z-index: 999;
-  color: var(--color-secondary);
+  color: var(--color-text);
 }
 
 .skip:focus {
