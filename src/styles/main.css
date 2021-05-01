@@ -117,6 +117,8 @@ nav {
   border: 1px solid var(--color-text);
   border-radius: 5px;
   cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .btn:hover {
@@ -135,6 +137,67 @@ nav {
   padding: 1rem 2rem;
 }
 
+.list__label {
+  margin: 10px 0 20px 0;
+}
+
+#posts {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.card-content-head {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.city {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.rating {
+  display: flex;
+}
+
+.rating .star {
+  color: gold;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  margin-right: 5px;
+}
+
+.rating p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-content {
+  line-height: 1.5;
+  font-size: 0.8rem;
+  padding: 15px;
+}
 /* 
 ** Footer
 *
@@ -152,4 +215,15 @@ nav {
   color: var(--color-text);
   font-size: 1rem;
   line-height: 3rem;
+}
+
+.skip {
+  position: absolute;
+  top: -50rem;
+  z-index: 999;
+  color: var(--color-secondary);
+}
+
+.skip:focus {
+  top: 0;
 }
