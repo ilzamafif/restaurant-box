@@ -3,5 +3,49 @@
   row-gap: 20px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (min-width: 768px) {
+  .bars-toggler {
+    display: none;
+  }
+
+  body {
+    overflow: hidden;
+  }
+  .nav-list {
+    position: static;
+    right: 0px;
+    top: 0rem;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-secondary);
+    align-items: center;
+    transform: translateX(0%);
+    transition: transform 0.5s ease-in;
+    width: 40%;
+  }
+
+  #posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .nav-list {
+    width: 45%;
+  }
+
+  #posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-list {
+    width: 55%;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
 }

@@ -14,7 +14,7 @@ function restaurantList(result) {
   menu.forEach((res, i) => {
     restaurant += /*html*/ `
     <div class="card" tabindex="0">
-      <img tabindex="0" src="${res.pictureId}" width="250px" alt="${res.name}" />
+      <img tabindex="0" src="${res.pictureId}" width="100%" alt="${res.name}" />
       <div class="card-content">
         <div class="card-content-head">
           <h3 class="title" tabindex="0">${res.name}</h3>
@@ -34,11 +34,13 @@ function restaurantList(result) {
 
   document.querySelector("#posts").innerHTML = restaurant;
 
-  document.querySelector(".bars-toggler").addEventListener("click", function () {
-    document.querySelector(".nav-list").classList.toggle("nav-block");
-  });
+  const newSilde = () => {
+    const bars = document.querySelector(".bars-toggler");
+    const nav = document.querySelector(".nav-list");
 
-  document.querySelector(".nav-list").addEventListener("click", function () {
-    document.querySelector(".nav-list").classList.remove("nav-block");
-  });
+    bars.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+    });
+  };
+  newSilde();
 }
