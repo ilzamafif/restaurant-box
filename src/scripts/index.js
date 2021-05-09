@@ -8,3 +8,11 @@ const app = new App({
   drawer: document.querySelector(".nav-list"),
   content: document.querySelector("#content"),
 });
+
+window.addEventListener("hashchange", () => {
+  app.renderPage();
+});
+
+window.addEventListener("load", () => {
+  app.renderPage();
+});
