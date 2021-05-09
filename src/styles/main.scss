@@ -1,0 +1,7 @@
+@import "./variable/font";
+@import "./variable/color";
+
+html {
+  font-family: $font-family;
+  color: $color-text;
+}
