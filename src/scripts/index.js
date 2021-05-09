@@ -1,12 +1,9 @@
 import "regenerator-runtime"; /* for async await transpile */
 import "../styles/main.css";
 import "../styles/responsive.css";
-
-fetch("DATA.JSON")
-  .then((respose) => respose.json())
-  .then((result) => {
-    restaurantList(result);
-  });
+import result from "../public/DATA.json";
+console.log(result);
+restaurantList(result);
 
 function restaurantList(result) {
   let restaurant = "";
