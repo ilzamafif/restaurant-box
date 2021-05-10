@@ -25,8 +25,16 @@
     width: 40%;
   }
 
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
   #posts {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .detail-review{
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -38,11 +46,33 @@
   #posts {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  #posts-detail{
+    margin: 0 10%;
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .detail-review{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   .nav-list {
     width: 55%;
+  }
+
+   #posts-detail{
+    margin: 0 10%;
+    grid-template-columns: repeat(1, 2.5fr);
+  }
+
+  .detail-review{
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 

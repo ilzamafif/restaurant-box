@@ -1,23 +1,23 @@
 import UrlParser from "../../routes/url-parser";
 import RestaurantSource from "../../data/restaurant-source";
+import { createMovieDetailTemplate } from "../templates/template-creator";
 
 const Detail = {
   async render() {
     return `
-      <div class="container">
-        <div class="main">
-          <div class="title-restaurant">Derail</div>
+        <div tabindex="0" class="list">
+          <h2 class="list__label">Detail Restourant</h2>
         </div>
-      </div>
+        <div id="posts-detail"></div>
     `;
   },
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const data = await RestaurantSource.detailRestaurant(url.id);
-    console.log(data);
+    const movieContainer = document.querySelector("#posts-detail");
 
-    // TODO: tampilkan movie di dalam DOM
+    movieContainer.innerHTML += createMovieDetailTemplate(data.restaurant);
   },
 };
 

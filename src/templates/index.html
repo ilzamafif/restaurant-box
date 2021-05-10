@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="website penyedia restaurant">
+    <meta name="keywords" content="Restaurant Box">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restourant Box</title>
-    <link rel="shortcut icon" href="../src/public/favicon.png" type="image/png">
-    <link rel="icon" href="../src/public/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -20,7 +22,7 @@
         <div class="navbar-brand">
           <p class="navbar-brand-logo">Restourant Box</p>
         </div>
-        <button type="button" tabindex="0" class="bars-toggler">
+        <button type="button" tabindex="0" class="bars-toggler" aria-label="click to show navbar">
           <span class="iconify" data-icon="la:bars" data-inline="false"></span>
         </button>
         <ul class="nav-list">
@@ -41,7 +43,12 @@
     </div>
 
     <main id="content">
-      
+      <section class="restaurant-content">
+        <div tabindex="0" class="list">
+          <h2 class="list__label">Restourant List</h2>
+        </div>
+        <div id="posts"></div>
+      </section>
     </main>
 
     <footer class="footer" tabindex="0">

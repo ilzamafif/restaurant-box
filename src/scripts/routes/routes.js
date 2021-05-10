@@ -5,8 +5,8 @@ import Favorite from "../views/pages/favorite";
 const routes = {
   "/": Home,
   "/home": Home,
-  "/favorite": Detail,
-  "/detail/:id": Favorite,
+  "/favorite": Favorite,
+  "/detail/:id": Detail,
 };
 
 export default routes;
