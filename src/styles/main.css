@@ -51,6 +51,7 @@ nav {
   justify-content: space-evenly;
   transition: transform 0.5s ease-in;
   width: 70%;
+  opacity: 0;
 }
 
 .nav-list .nav-item {
@@ -264,8 +265,11 @@ nav {
 }
 
 .card-wrapper{
-  min-width: 250px;
   display: block;
+  box-sizing: border-box;
+  width: 98%;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 
 .restaurant-image{
