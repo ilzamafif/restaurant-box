@@ -13,9 +13,9 @@ const Home = {
 
   async afterRender() {
     const data = await RestaurantSource.listRestaurant();
-    const moviesContainer = document.querySelector("#posts");
+    const restaurantsContainer = document.querySelector("#posts");
     data.restaurants.forEach((restaurant) => {
-      moviesContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
   },
 };
