@@ -1,6 +1,6 @@
 import CONFIG from "../../globals/config";
 
-const createMovieDetailTemplate = (detail) => {
+const createRestaurantDetailTemplate = (detail) => {
   return `<div class="card-wrapper">
             <div class="restaurant-image">
                <img tabindex="0" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" width="100%" alt="${detail.name}" />
@@ -46,7 +46,7 @@ const createMovieDetailTemplate = (detail) => {
           `;
 };
 
-const createMovieItemTemplate = (restaurant) => `
+const createRestaurantItemTemplate = (restaurant) => `
   <div class="card" tabindex="0">
       <img tabindex="0" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" width="100%" alt="${restaurant.name}" />
       <div class="card-content">
@@ -66,15 +66,15 @@ const createMovieItemTemplate = (restaurant) => `
   `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
-    <span class="iconify" data-icon="ant-design:heart-filled" data-inline="false"></span>
+  <button aria-label="like this Restaurnt" id="likeButton" class="like">
+     <span class="iconify" data-icon="akar-icons:heart" data-inline="false"></span>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
-    <span class="iconify" data-icon="akar-icons:heart" data-inline="false"></span>
+  <button aria-label="unlike this Restaurnt" id="likeButton" class="like">
+    <span class="iconify" data-icon="ant-design:heart-filled" data-inline="false"></span>
   </button>
 `;
 
-export { createMovieItemTemplate, createMovieDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
+export { createRestaurantDetailTemplate, createRestaurantItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
