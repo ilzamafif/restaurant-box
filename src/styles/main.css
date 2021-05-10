@@ -135,6 +135,25 @@ nav {
 .btn:hover {
   background-color: #2a03c5;
 }
+/*
+   Like
+*/
+.like {
+    font-size: 28px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: var(--color-orange);
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* 
 ** Content

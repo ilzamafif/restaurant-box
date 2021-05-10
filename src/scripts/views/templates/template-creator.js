@@ -65,4 +65,16 @@ const createMovieItemTemplate = (restaurant) => `
     </div>
   `;
 
-export { createMovieItemTemplate, createMovieDetailTemplate };
+const createLikeButtonTemplate = () => `
+  <button aria-label="like this movie" id="likeButton" class="like">
+    <span class="iconify" data-icon="ant-design:heart-filled" data-inline="false"></span>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unlike this movie" id="likeButton" class="like">
+    <span class="iconify" data-icon="akar-icons:heart" data-inline="false"></span>
+  </button>
+`;
+
+export { createMovieItemTemplate, createMovieDetailTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
