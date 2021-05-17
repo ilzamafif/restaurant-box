@@ -16,6 +16,7 @@
         "no-underscore-dangle": "off",
         "operator-linebreak":"off",
         "implicit-arrow-linebreak":"off",
+        "max-len": "off",
         "no-console":"off"
     }
 }

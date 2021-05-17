@@ -1,5 +1,4 @@
-import NotificationHelper from "./notification-helper";
-import CONFIG from "../globals/config";
+import NotificationHelper from './notification-helper';
 
 const WebSocketInitiator = {
   init(url) {
@@ -13,7 +12,7 @@ const WebSocketInitiator = {
       title: `${restaurant.title} is on cinema!`,
       options: {
         body: restaurant.overview,
-        icon: "icons/icon-192x192.png",
+        icon: 'icons/icon-192x192.png',
       },
     });
   },
