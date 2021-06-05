@@ -18,45 +18,13 @@
   </head>
 
   <body>
-    <a href="#content" class="skip">Menuju kontent</a>
+    <skip-content></skip-content>
     <header">
-      <div class="container">
-        <div class="navbar-brand">
-          <a href="#/home" class="navbar-brand-logo">Restourant Box</a>
-        </div>
-        <button id="menu" tabindex="0" class="bars-toggler" aria-label="click to show navbar">
-          <span class="iconify" data-icon="la:bars" data-inline="false"></span>
-        </button>
-        <nav id="drawer">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#/">Home</a></li>
-            <li class="nav-item"><a href="#/favorite">Favorite</a></li>
-            <li class="nav-item"><a href="http://github.com/ilzamafif">About</a></li>
-          </ul>
-        </nav>
-      </div>
+      <navigator-bar></navigator-bar>
     </header>
-
-    <div class="hero">
-      <div tabindex="0" class="hero__inner">
-        <h1 class="hero__title">Explore the restaurant</h1>
-        <div class="hero__tagline">You will feel pleasure that you have never felt</div>
-        <a href="#content" class="btn">See Restaurant</a>
-      </div>
-    </div>
-
-    <main id="content">
-      <section class="restaurant-content">
-        <div tabindex="0" class="list">
-          <h2 class="list__label">Restourant List</h2>
-        </div>
-        <div id="posts"></div>
-      </section>
-    </main>
-
-    <footer class="footer" tabindex="0">
-      <p>Copyright &copy;2021 | Restaurant Box</p>
-    </footer>
+    <hero-custom></hero-custom>
+    <main-bar></main-bar>
+    <footer-bar></footer-bar>
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </body>
