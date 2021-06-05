@@ -15,7 +15,6 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--color-text);
   font-size: 14px;
-  overflow-x: hidden;
 }
 
 /* 
@@ -23,61 +22,67 @@ body {
 *
 */
 
-nav {
+.container {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  min-height: 4rem;
   background-color: var(--color-secondary);
 }
 
 .navbar-brand {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-text);
-  text-transform: uppercase;
+  width: 60%;
+  margin-left: 5%;
+}
+
+.navbar-brand .navbar-brand-logo {
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  font-size: 24px;
+  color: #212738;
 }
 
 .nav-list {
-  position: absolute;
-  right: 0;
-  top: 4rem;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  background-color: var(--color-secondary);
-  align-items: center;
-  transform: translateX(100%);
-  justify-content: space-evenly;
-  transition: transform 0.5s ease-in;
-  width: 70%;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .nav-list .nav-item {
   list-style: none;
+  margin-right: 5%;
 }
 
-.nav-list a {
+.nav-list .nav-item a {
   text-decoration: none;
-  letter-spacing: 3px;
+  font-size: 1em;
   font-weight: bold;
   color: var(--color-text);
   display: inline-block;
   min-width: 44px;
-  min-height: 44px;
   line-height: 44px;
 }
 
-.nav-list a:hover {
+.nav-list .nav-item a:hover {
   color: var(--color-primary);
 }
 
 .bars-toggler {
   font-size: 44px;
-  line-height: 44px;
-  width: 44px;
-  height: 44px;
+  border: none;
+  background-color: transparent;
+  color: #212738;
+  margin: 0 5%;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
   cursor: pointer;
+}
+
+#drawer {
+  width: 70%;
 }
 
 /* 
@@ -181,7 +186,7 @@ nav {
 }
 
 .card:hover {
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .card-content-head {

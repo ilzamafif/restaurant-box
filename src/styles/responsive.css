@@ -3,26 +3,61 @@
   row-gap: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 505px) {
+  nav {
+    z-index: 10;
+    background-color: var(--color-secondary);
+    width: 300px;
+    top: 0;
+    height: 100vh;
+    position: fixed;
+    -webkit-transform: translate(0-600px, 0);
+    transform: translate(-600px, 0);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-active {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav-list {
+    padding: 20px;
+    margin-top: 40px;
+    display: list-item;
+    align-items: left;
+  }
+
+  .nav-list .nav-item:first-child {
+    border-top: 1px solid var(--color-text);
+  }
+
+  .nav-list .nav-item{
+    border-bottom: 1px solid var(--color-text);
+  }
+
+  .nav-list .nav-item a {
+    color: var(--color-text);
+  }
+}
+
+@media screen and (min-width: 506px) {
   .bars-toggler {
     display: none;
   }
 
-  body {
-    overflow-x: hidden;
+  .nav-list .nav-item{
+    width: 20%;
   }
-  .nav-list {
-    position: static;
-    right: 0px;
-    top: 0rem;
-    height: 4rem;
-    display: flex;
-    flex-direction: row;
-    background-color: var(--color-secondary);
-    align-items: center;
-    transform: translateX(0%);
-    transition: transform 0.5s ease-in;
+
+  .navbar-brand .navbar-brand-logo {
     width: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list .nav-item{
+    width: 20%;
   }
 
   .hero__title {
@@ -33,16 +68,13 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .detail-review{
+  .detail-review {
     grid-template-columns: 1fr 1fr;
   }
+
 }
 
 @media screen and (min-width: 900px) {
-  .nav-list {
-    width: 45%;
-  }
-
   #posts {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -51,32 +83,24 @@
     font-size: 3rem;
   }
 
-  #posts-detail{
+  #posts-detail {
     margin: 0 10%;
     grid-template-columns: repeat(1, 2fr);
   }
 
-  .detail-review{
+  .detail-review {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .nav-list {
-    width: 55%;
-  }
 
-   #posts-detail{
+  #posts-detail {
     margin: 0 10%;
     grid-template-columns: repeat(1, 2.5fr);
   }
 
-  .detail-review{
+  .detail-review {
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
-
-.nav-active {
-  transform: translateX(0%);
-  opacity: 1;
 }

@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="website penyedia restaurant">
-    <meta name="keywords" content="Restaurant Box">
+    <meta name="description" content="website penyedia restaurant" />
+    <meta name="keywords" content="Restaurant Box" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="favicon.png" type="image/png">
-    <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     <title>Restourant Box</title>
-    <meta name="theme-color" content="#57c4e5"/>
+    <meta name="theme-color" content="#57c4e5" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -19,21 +19,22 @@
 
   <body>
     <a href="#content" class="skip">Menuju kontent</a>
-    <header class="header">
-      <nav class="nav">
+    <header">
+      <div class="container">
         <div class="navbar-brand">
-          <p class="navbar-brand-logo">Restourant Box</p>
+          <a href="#/home" class="navbar-brand-logo">Restourant Box</a>
         </div>
-        <button type="button" tabindex="0" class="bars-toggler" aria-label="click to show navbar">
+        <button id="menu" tabindex="0" class="bars-toggler" aria-label="click to show navbar">
           <span class="iconify" data-icon="la:bars" data-inline="false"></span>
         </button>
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#/">Home</a></li>
-          <li class="nav-item"><a href="#/favorite">Favorite</a></li>
-          <li class="nav-item"><a href="http://github.com/ilzamafif">About</a></li>
-        </ul>
-      </nav>
-
+        <nav id="drawer">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#/">Home</a></li>
+            <li class="nav-item"><a href="#/favorite">Favorite</a></li>
+            <li class="nav-item"><a href="http://github.com/ilzamafif">About</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="hero">

@@ -7,8 +7,8 @@ import WebSocketInitiator from './utils/websocket-initiator';
 import CONFIG from './globals/config';
 
 const app = new App({
-  button: document.querySelector('.bars-toggler'),
-  drawer: document.querySelector('.nav-list'),
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#drawer'),
   content: document.querySelector('#content'),
 });
 
