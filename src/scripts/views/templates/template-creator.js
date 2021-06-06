@@ -1,65 +1,62 @@
 import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (detail) => `
-  <div class="card-wrapper">
+  <div class="card-detail">
     <div class="restaurant-image">
-        <img tabindex="0" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" width="100%" alt="${detail.name}" />
+      <img tabindex="0" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" width="100%" alt="${detail.name}" />
     </div>
-    <div class="restaurant-content">
-      <h3 class="restaurant-title" tabindex="0">${detail.name}</h3>
-      <div class="restaurant-city" tabindex="0"><span>City</span> : ${detail.city}</div>
-      <div class="rating" tabindex="0">
-        <span class="iconify star" data-icon="bi:star-fill" data-inline="false"></span> <span>${detail.rating}</span>
+    <div class="restaurant-detail-content">
+      <div class="restaurant-detail">
+        <h3 class="restaurant-title" tabindex="0">${detail.name}</h3>
+        <div class="rating" tabindex="0">
+          <span class="iconify iconify-star" data-icon="bi:star-fill" data-inline="false"></span> <span class="rating-text">${detail.rating}</span>
+        </div>
+        <div class="restaurant-desc" tabindex="0">${detail.description}</div>
+        <div class="restaurant-location" tabindex="0"><span>Location</span> : ${detail.address}, ${detail.city}</div>
       </div>
-      <div class="restaurant-address" tabindex="0"><span>Address</span> : ${detail.address}</div>
-      <div class="restaurant-detail" tabindex="0">
-        <p tabindex="0">${detail.description}</p>
-        <ul tabindex="0">
-          Categories : ${detail.categories.map((categori) => `<li>${categori.name}</li>`).join('')}
-        </ul>
-        <ul tabindex="0">
-          Foods menu : ${detail.menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
-        </ul>
-        <ul tabindex="0">
-          Drinks menu :${detail.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
-        </ul>
-        <div class="detail-review" tabindex="0">
-          ${detail.customerReviews.map((review) => `
-                <div class="detail-review-item" tabindex="0">
-                  <div class="review-header" tabindex="0">
-                    <p class="review-name" tabindex="0">${review.name}</p>
-                    <p class="review-date" tabindex="0">${review.date}</p>
-                  </div>
-                  <div class="review-body" tabindex="0">
-                    ${review.review}
-                  </div>
-                </div>
-                `).join('')}
-          </div>
+      <div class="detail-menu" tabindex="0">
+        <p class="detail-menu-title" tabindex="0">Kategori</p>
+        ${detail.categories.map((categori) => `<span class="category-name">${categori.name}</span>`).join('')}
+        <p class="detail-menu-title" tabindex="0">Daftar Makanan</p>
+        ${detail.menus.foods.map((food) => `<span class="food-name">${food.name}</span> `)}
+        <p class="detail-menu-title" tabindex="0">Daftar Minuman</p>
+        ${detail.menus.drinks.map((drink) => `<span class="drink-name">${drink.name}</span> `)}
       </div>
     </div>
-  </div>
-  `;
+    <div class="review" tabindex="0">
+      <h1 class="review-title" tabindex="0">Review</h1>
+      <div class="review-container" tabindex="0">
+       ${detail.customerReviews.map((review) => `
+        <div class="review-item" tabindex="0">
+          <p class="review-name" tabindex="0">${review.name}</p>
+          <p class="review-date" tabindex="0">${review.date}</p>
+          <p class="review-comment" tabindex="0">${review.review}</p>
+        </div>`).join('')}
+      </div>      
+    </div>
+  </div>`;
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="card" tabindex="0">
+    <figure class="image-restaurant">
       <img tabindex="0" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" width="100%" alt="${restaurant.name}" />
-      <div class="card-content">
-          <div class="card-content-head">
-            <a href="${`/#/detail/${restaurant.id}`}">
-             <h3 class="title" tabindex"0">${restaurant.name}</h3>
-            </a>
-          <div class="rating" tabindex="0">
-            <span class="iconify star" data-icon="bi:star-fill" data-inline="false"></span>
-            <p>${restaurant.rating}</p>
-          </div>
-        </div>
-        <h3 class="city" tabindex="0">Loc : ${restaurant.city}</h3>
-        <p tabindex="0">
-          ${restaurant.description}
-        </p>
+    </figure>
+    <div class="card-content">
+      <h3 class="card-title" tabindex"0">
+        <a href="${`/#/detail/${restaurant.id}`}">
+          ${restaurant.name}
+        </a>
+        </h3>
+      <div class="rating" tabindex="0">
+        <span class="iconify iconify-star" data-icon="bi:star-fill" data-inline="false"></span>
+        <p>${restaurant.rating}</p>
       </div>
+      <h3 class="restaurant-city" tabindex="0">Loc : ${restaurant.city}</h3>
+      <p tabindex="0" class="restaurant-desc">
+        ${restaurant.description}
+      </p>
     </div>
+  </div>
   `;
 
 const createLikeButtonTemplate = () => `

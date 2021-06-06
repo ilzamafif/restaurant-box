@@ -4,10 +4,10 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const Home = {
   async render() {
     return `
-          <div tabindex='0' class='list'>
-            <h2 class='list__label'>Restourant List</h2>
-          </div>
-          <div id='posts'></div>
+          <section class="restaurant-content">
+            <h2 class="list__label" tabindex="0">Restourant List</h2>
+            <div id="posts"></div>
+          </section>
     `;
   },
 

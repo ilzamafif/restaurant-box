@@ -4,11 +4,9 @@ import { createRestaurantItemTemplate } from '../templates/template-creator';
 const Favorite = {
   async render() {
     return `
-     <section class='restaurant-content'>
-        <div tabindex='0' class='list'>
-          <h2 class='list__label'>Your Favorite Restaurant List</h2>
-        </div>
-        <div id='posts'></div>
+      <section class="restaurant-content">
+        <h2 class="list__label" tabindex="0">Restourant List</h2>
+        <div id="posts"></div>
       </section>
     `;
   },
