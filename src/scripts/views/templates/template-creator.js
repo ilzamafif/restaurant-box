@@ -60,13 +60,13 @@ const createRestaurantItemTemplate = (restaurant) => `
   `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this Restaurnt" id="likeButton" class="like" tabindex="0">
+  <button aria-label="like this restaurant" id="likeButton" class="like" tabindex="0">
      <span class="iconify" data-icon="akar-icons:heart" data-inline="false"></span>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this Restaurnt" id="likeButton" class="like" tabindex="0">
+  <button aria-label="unlike this restaurant" id="likeButton" class="like" tabindex="0">
     <span class="iconify" data-icon="ant-design:heart-filled" data-inline="false"></span>
   </button>
 `;
