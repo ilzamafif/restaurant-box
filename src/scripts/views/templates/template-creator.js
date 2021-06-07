@@ -43,10 +43,10 @@ const createRestaurantItemTemplate = (restaurant) => `
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
-        <a href="${`/#/detail/${restaurant.id}`}">
+        <a href="${`/#/detail/${restaurant.id}`}" class="card-link">
           ${restaurant.name}
         </a>
-        </h3>
+      </h3>
       <div class="rating" tabindex="0">
         <span class="iconify iconify-star" data-icon="bi:star-fill" data-inline="false"></span>
         <p>${restaurant.rating}</p>

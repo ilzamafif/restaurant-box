@@ -12,11 +12,20 @@ const Home = {
   },
 
   async afterRender() {
-    const data = await RestaurantSource.listRestaurant();
-    const restaurantsContainer = document.querySelector('#posts');
-    data.restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
-    });
+    
+
+    try {
+      const data = await RestaurantSource.listRestaurant();
+      const restaurantsContainer = document.querySelector('#posts');
+      data.restaurants.forEach((restaurant) => {
+        restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      });
+    
+    } catch (error) {
+      console.log(error);
+      restaurantsContainer.innerHTML = '<error-message></error-message>';
+    }
+
   },
 };
 

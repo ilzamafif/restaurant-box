@@ -383,3 +383,29 @@ body {
   margin: 15px 0;
   font-size: 1rem;
 }
+
+/* 
+** Messege
+*
+*/
+
+error-message, favorite-message {
+  text-align: center;
+  width: 90%;
+  margin: auto;
+  height: 100%;
+  padding: 20px;
+  display: grid;
+}
+
+error-message h1,
+favorite-message h1 {
+  color: red;
+  font-size: 1.3rem;
+}
+
+error-message p,
+favorite-message p {
+  color: red;
+  font-size: 0.9rem;
+}

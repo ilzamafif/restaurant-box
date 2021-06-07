@@ -3,6 +3,8 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import './components/navigator-bar';
 import './components/skip-content';
+import './components/error-message';
+import './components/favorite-message';
 import './components/hero-custom';
 import './components/footer-bar';
 import App from './views/app';
