@@ -40,7 +40,7 @@ const createRestaurantItemTemplate = (restaurant) => `
   <div class="card" tabindex="0">
     <figure>
       <img class="restaurant-image lazyload" alt="image ${restaurant.name}"
-      data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" crossorigin="anonymous"/>
+      data-src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" crossorigin="anonymous"/>
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
