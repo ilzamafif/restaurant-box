@@ -99,7 +99,7 @@ body {
   min-height: 70vh;
   width: 100%;
   background-color: #fff;
-  background-image: url("/images/heros/hero-image_3.jpg");
+  background-image: url("/images/hero-small.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -408,4 +408,13 @@ error-message p,
 favorite-message p {
   color: red;
   font-size: 0.9rem;
+}
+
+
+.restaurant-image{
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }

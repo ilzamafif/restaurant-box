@@ -17,6 +17,7 @@
         "operator-linebreak":"off",
         "implicit-arrow-linebreak":"off",
         "max-len": "off",
+        "comma-dangle": "off",
         "no-console":"off",
         "no-restricted-globals": "off"
     }

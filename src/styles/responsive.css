@@ -55,6 +55,10 @@
     width: 20%;
   }
 
+  .hero{
+     background-image: url("/images/hero-large.jpg");
+  }
+
   .hero__title {
     font-size: 2.5rem;
   }

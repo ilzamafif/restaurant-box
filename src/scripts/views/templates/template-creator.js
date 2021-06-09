@@ -2,9 +2,9 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (detail) => `
   <div class="card-detail">
-    <div class="restaurant-image">
-      <img tabindex="0" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" width="100%" alt="${detail.name}" />
-    </div>
+    <figure class="restaurant-image">
+      <img tabindex="0" class="lazyload" src="${CONFIG.BASE_IMAGE_URL + detail.pictureId}" alt="${detail.name}" />
+    </figure>
     <div class="restaurant-detail-content">
       <div class="restaurant-detail">
         <h3 class="restaurant-title" tabindex="0">${detail.name}</h3>
@@ -38,8 +38,9 @@ const createRestaurantDetailTemplate = (detail) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="card" tabindex="0">
-    <figure class="image-restaurant">
-      <img tabindex="0" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" width="100%" alt="${restaurant.name}" />
+    <figure>
+      <img class="restaurant-image lazyload" alt="image ${restaurant.name}"
+      data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" crossorigin="anonymous"/>
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
@@ -59,6 +60,36 @@ const createRestaurantItemTemplate = (restaurant) => `
   </div>
   `;
 
+const createSkeletonRestaurantItemTemplate = (count) => {
+  let template = '';
+
+  for (let i = 0; i < count; i += 1) {
+    template += `
+   <div class="card" tabindex="0">
+    <figure ">
+      <img class="restaurant-image" alt="image skeleton" src="./images/placeholder.png" width="100%" crossorigin="anonymous"/>
+    </figure>
+    <div class="card-content">
+      <h3 class="card-title" tabindex"0">
+        <p class="card-link">
+          Lorem ipsum dolor sit amet consectetur.
+        </p>
+      </h3>
+      <div class="rating" tabindex="0">
+        <span class="iconify iconify-star" data-icon="bi:star-fill" data-inline="false"></span>
+        <p>5</p>
+      </div>
+      <h3 class="restaurant-city" tabindex="0">Loc : Lorem ipsum dolor sit amet consectetur</h3>
+      <p tabindex="0" class="restaurant-desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laborum adipisci fuga impedit sunt, quas dolore vero possimus iure quasi rerum, temporibus voluptates, debitis nemo. At consequatur voluptatum sapiente quia dolores, aut doloremque ut magnam illum velit ex aliquid beatae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laborum adipisci fuga impedit sunt, quas dolore vero possimus iure quasi rerum, temporibus voluptates, debitis nemo. At consequatur voluptatum sapiente quia dolores, aut doloremque ut magnam illum velit ex aliquid beatae?Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima laborum adipisci fuga impedit sunt, quas dolore vero possimus iure quasi rerum, temporibus voluptates, debitis nemo. At consequatur voluptatum sapiente quia dolores, aut doloremque ut magnam illum velit ex aliquid beatae?
+      </p>
+    </div>
+  </div>
+  `;
+  }
+  return template;
+};
+
 const createLikeButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like" tabindex="0">
      <span class="iconify" data-icon="akar-icons:heart" data-inline="false"></span>
@@ -72,5 +103,5 @@ const createLikedButtonTemplate = () => `
 `;
 
 export {
-  createRestaurantDetailTemplate, createRestaurantItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate,
+  createRestaurantDetailTemplate, createRestaurantItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate, createSkeletonRestaurantItemTemplate
 };
