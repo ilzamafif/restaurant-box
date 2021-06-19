@@ -1,4 +1,4 @@
-import { itActsAsfavoriteRestaurantsModel } from './contract/favoriteRestaurantContract';
+import { itActsAsfavoriteRestaurantModel } from './contract/favoriteRestaurantContract';
 import FavoriteRestaurantIdb from '../src/scripts/data/restaurant-idb';
 
 describe('Favorite Restaurant Idb Contract Test Implementation', () => {
@@ -8,5 +8,5 @@ describe('Favorite Restaurant Idb Contract Test Implementation', () => {
     });
   });
 
-  itActsAsfavoriteRestaurantsModel(FavoriteRestaurantIdb);
+  itActsAsfavoriteRestaurantModel(FavoriteRestaurantIdb);
 });

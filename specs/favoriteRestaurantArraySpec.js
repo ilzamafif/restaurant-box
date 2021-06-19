@@ -1,4 +1,4 @@
-import { itActsAsfavoriteRestaurantsModel } from './contract/favoriteRestaurantContract';
+import { itActsAsfavoriteRestaurantModel } from './contract/favoriteRestaurantContract';
 
 let favoriteRestaurants = [];
 
@@ -12,7 +12,7 @@ const FavoriteRestaurantArray = {
     return favoriteRestaurants.find((restaurant) => restaurant.id === id);
   },
 
-  getAllRestaurant() {
+  getAllRestaurants() {
     return favoriteRestaurants;
   },
 
@@ -36,5 +36,5 @@ const FavoriteRestaurantArray = {
 describe('Favorite Restaurant Array Contract Test Implementation', () => {
   afterEach(() => favoriteRestaurants = []);
 
-  itActsAsfavoriteRestaurantsModel(FavoriteRestaurantArray);
+  itActsAsfavoriteRestaurantModel(FavoriteRestaurantArray);
 });
