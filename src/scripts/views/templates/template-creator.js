@@ -71,9 +71,9 @@ const createSkeletonRestaurantItemTemplate = (count) => {
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
-        <p class="card-link">
+        <a class="card-link">
           Lorem ipsum dolor sit amet consectetur.
-        </p>
+        </a>
       </h3>
       <div class="rating" tabindex="0">
         <span class="iconify iconify-star" data-icon="bi:star-fill" data-inline="false"></span>
