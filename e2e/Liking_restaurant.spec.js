@@ -18,7 +18,7 @@ Scenario('like and unlike one restaurant', async (I) => {
 
   I.amOnPage('/');
 
-  I.seeElement('.card');
+  I.seeElement('.card .card-title');
 
   const firstRestaurant = locate('.card-link').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
