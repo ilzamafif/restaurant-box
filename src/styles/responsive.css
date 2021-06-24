@@ -1,0 +1,123 @@
+@media screen and (max-width: 505px) {
+  nav {
+    z-index: 10;
+    background-color: var(--color-secondary);
+    width: 100%;
+    top: 0;
+    height: 100vh;
+    position: fixed;
+    -webkit-transform: translate(-600px, 0);
+    transform: translate(-600px, 0);
+    transition: transform 0.5s ease-in;
+    display: block;
+  }
+
+  .nav-active {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .nav-list {
+    padding: 20px;
+    margin-top: 40px;
+    display: list-item;
+    align-items: left;
+  }
+
+  .nav-list .nav-item:first-child {
+    border-top: 1px solid var(--color-text);
+  }
+
+  .nav-list .nav-item{
+    border-bottom: 1px solid var(--color-text);
+  }
+
+  .nav-list .nav-item a {
+    color: var(--color-text);
+  }
+}
+
+@media screen and (min-width: 506px) {
+  .bars-toggler {
+    display: none;
+  }
+
+  .nav-list .nav-item{
+    width: 20%;
+  }
+
+  .navbar-brand .navbar-brand-logo {
+    width: 40%;
+    font-size: 44px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list .nav-item{
+    width: 20%;
+  }
+
+  .hero{
+     background-image: url("/images/hero-large.jpg");
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__inner .hero__title {
+    font-size: 3.8rem;
+  }
+
+  .hero__tagline {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  #posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .review .review-container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  #posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero__title {
+    font-size: 3rem;
+  }
+
+  #posts-detail {
+    margin: 0 10%;
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .detail-restaurant-content .list__label{
+    margin: 20px 0;
+    padding-left: 14%;
+    font-size: 30px;
+  }
+
+  .review .review-container{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  #posts-detail {
+    margin: 0 10%;
+    grid-template-columns: repeat(1, 2.5fr);
+  }
+
+  .review .review-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

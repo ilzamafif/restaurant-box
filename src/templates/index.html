@@ -3,61 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="website penyedia restaurant" />
+    <meta name="keywords" content="Restaurant Box" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Restaurant Box</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+    <title>Restourant Box</title>
+    <meta name="theme-color" content="#57c4e5" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="preload" as="style" onload="this.onload;this.rel='stylesheet'" />
   </head>
+
   <body>
-    <a href="#main-content"> Menuju Ke Kontent</a>
-
-    <!-- start header -->
-    <header class="header">
-      <nav class="nav">
-        <div class="mobile-menu">
-          <div class="navbar__brand">
-            <a href="/" class="navbar__brand__logo">Restourant Box<span class="logo__dot">.</span></a>
-          </div>
-          <div class="menu-container">
-            <div id="bars-toggler">
-              <button type="button" class="menu" type="button">
-                <i class="fas fa-bars"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <ul class="nav-list">
-          <li><a href="/" class="nav-item">Home</a></li>
-          <li><a href="#" class="nav-item">Favorite</a></li>
-          <li><a href="http://github.com/ilzamafif" target="_blank" class="nav-item">About Us</a></li>
-        </ul>
-      </nav>
-
-      <!-- start hero -->
-      <div class="hero">
-        <div class="hero__inner" tabindex="0">
-          <div class="hero__title">Explore the restaurant</div>
-          <div class="hero__tagline">You will feel pleasure that you have never felt</div>
-          <a href="#main-content" class="btn">Jelajahi Restaurant</a>
-        </div>
-      </div>
-      <!-- end hero -->
+    <skip-content></skip-content>
+    <header>
+      <navigator-bar></navigator-bar>
     </header>
+    <hero-custom></hero-custom>
+    <main id="content"></main>
+    <footer-bar></footer-bar>
 
-    <!-- end header -->
-
-    <!-- start contnet -->
-    <main id="main-content">
-      <section class="list">
-        <h2 class="list__label">Restourant List</h2>
-        <div class="posts"></div>
-      </section>
-    </main>
-    <!-- end content -->
-
-    <!-- start footer -->
-    <footer class="footer">
-      <p>Copywrite @2021 All Right Reserved | Made by <a href="#">Ilzam Afif</a></p>
-    </footer>
-    <!-- end content -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
   </body>
 </html>
