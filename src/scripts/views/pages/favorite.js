@@ -15,7 +15,7 @@ const Favorite = {
     const data = await FavoriteRestaurantIdb.getAllRestaurants();
     const dataContainer = document.querySelector('#posts');
     if (data.length === 0) {
-          dataContainer.innerHTML = '<favorite-message></favorite-message>';
+      dataContainer.innerHTML = '<favorite-message></favorite-message>';
     }
 
     data.forEach((restaurant) => {

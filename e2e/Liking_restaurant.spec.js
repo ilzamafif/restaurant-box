@@ -1,9 +1,10 @@
+/* eslint-disable no-undef */
 const assert = require('assert');
 Feature('Liking restaurant');
 
 Before((I) => {
   I.amOnPage('/#/favorite');
-})
+});
 
 const messageText = 'Data restaurant favorit masih kosong';
 
@@ -17,10 +18,10 @@ Scenario('like and unlike one restaurant', async (I) => {
   I.see(messageText, 'favorite-message');
 
   I.amOnPage('/');
+  I.waitForElement('h3.card-title .card-link', 10);
+  I.seeElement('h3.card-title .card-link');
 
-  I.seeElement('.card');
-
-  const firstRestaurant = locate('.card-link').first();
+  const firstRestaurant = locate('h3.card-title .card-link').first();
   const firstRestaurantTitle = await I.grabTextFrom(firstRestaurant);
   I.click(firstRestaurant);
 
@@ -28,7 +29,7 @@ Scenario('like and unlike one restaurant', async (I) => {
   I.click('#likeButton');
 
   I.amOnPage('/#/favorite');
-  I.seeElement('#posts');
+  I.seeElement('.card');
 
   const likeRestaurantTitle = await I.grabTextFrom('h3.card-title');
   assert.strictEqual(firstRestaurantTitle, likeRestaurantTitle);

@@ -40,7 +40,7 @@ body {
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 44px;
   color: #212738;
 }
 
@@ -178,11 +178,13 @@ body {
   color: var(--color-text);
 }
 
-#posts .card .image-restaurant{
+#posts .card .restaurant-image{
   overflow: hidden;
+  width: 100%;
+  display: block;
 }
 
-#posts .card .image-restaurant img{
+#posts .card .restaurant-image img{
   background-position: center;
   background-size: cover;
   height: 250px;

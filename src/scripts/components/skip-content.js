@@ -1,9 +1,9 @@
-class SkipContent extends HTMLElement{
-  connectedCallback(){
+class SkipContent extends HTMLElement {
+  connectedCallback() {
     this.render();
   }
 
-  render(){
+  render() {
     this.innerHTML = `
     <a href="#content" class="skip">Menuju kontent</a>
     `;

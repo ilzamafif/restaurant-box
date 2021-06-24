@@ -1,9 +1,9 @@
-class HeroCustom extends HTMLElement{
-  connectedCallback(){
+class HeroCustom extends HTMLElement {
+  connectedCallback() {
     this.render();
   }
 
-  render(){
+  render() {
     this.innerHTML = `
       <div class="hero">
         <div tabindex="0" class="hero__inner">

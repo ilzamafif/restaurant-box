@@ -21,11 +21,9 @@ const Home = {
       data.restaurants.forEach((restaurant) => {
         restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
       });
-    
     } catch (error) {
       restaurantsContainer.innerHTML = '<error-message></error-message>';
     }
-
   },
 };
 
