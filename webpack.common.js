@@ -29,6 +29,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new ExtractTextPlugin({
+      filename: "css/app.bundle.css",
+      allChunks: true,
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src/templates/index.html"),
       filename: "index.html",
