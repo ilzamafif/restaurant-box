@@ -50,6 +50,10 @@
     width: 40%;
     font-size: 44px;
   }
+
+  #posts .card {
+    width: 390px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -75,21 +79,17 @@
     margin-bottom: 30px;
   }
 
-  #posts {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .review .review-container{
     grid-template-columns: 1fr 1fr;
+  }
+
+  #posts .card {
+    width: 310px;
   }
 
 }
 
 @media screen and (min-width: 900px) {
-  #posts {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .hero__title {
     font-size: 3rem;
   }
@@ -107,6 +107,10 @@
 
   .review .review-container{
     grid-template-columns: 1fr 1fr;
+  }
+
+  #posts .card {
+    width: 300px;
   }
 }
 

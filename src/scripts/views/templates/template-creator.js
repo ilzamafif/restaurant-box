@@ -38,9 +38,8 @@ const createRestaurantDetailTemplate = (detail) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="card" tabindex="0">
-    <figure>
-      <img class="restaurant-image lazyload" alt="image ${restaurant.name}"
-      data-src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" crossorigin="anonymous"/>
+    <figure class="restaurant-image">
+      <img lazyload alt="image ${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" crossorigin="anonymous"/>
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
@@ -66,8 +65,8 @@ const createSkeletonRestaurantItemTemplate = (count) => {
   for (let i = 0; i < count; i += 1) {
     template += `
    <div class="card" tabindex="0">
-    <figure ">
-      <img class="restaurant-image" alt="image skeleton" src="./images/placeholder.png" width="100%" crossorigin="anonymous"/>
+    <figure class="restaurant-image"">
+      <img alt="image skeleton" src="./images/placeholder.png" width="100%" crossorigin="anonymous"/>
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
