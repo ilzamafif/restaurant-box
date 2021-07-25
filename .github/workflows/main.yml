@@ -17,14 +17,12 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build dependencies
-        run: npm run build
+        run: npm run build && exit
       - name: Archive production artifact
         uses: actions/upload-artifact@master
         with:
           name: dist
           path: dist
-      - name: close it
-        run: ctrl + C
   deploy:
     name: Deploy
     needs: build
