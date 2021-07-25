@@ -23,6 +23,8 @@ jobs:
         with:
           name: dist
           path: dist
+      - name: close it
+        run: ctrl + C
   deploy:
     name: Deploy
     needs: build
