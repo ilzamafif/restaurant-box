@@ -19,7 +19,7 @@ jobs:
       - name: Build dependencies
         run: npm run build
       - name: Build image
-        run: npm run build-imaage
+        run: npm run build-image
       - name: Archive production artifact
         uses: actions/upload-artifact@master
         with:
