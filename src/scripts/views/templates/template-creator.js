@@ -24,7 +24,7 @@ const createRestaurantDetailTemplate = (detail) => `
       </div>
     </div>
     <div class="review" tabindex="0">
-      <h1 class="review-title" tabindex="0">Review</h1>
+      <h1 class="review-title" tabindex="0">Review Customer</h1>
       <div class="review-container" tabindex="0">
        ${detail.customerReviews.map((review) => `
         <div class="review-item" tabindex="0">
@@ -39,7 +39,8 @@ const createRestaurantDetailTemplate = (detail) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="card" tabindex="0">
     <figure class="restaurant-image">
-      <img lazyload alt="image ${restaurant.name}" src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" crossorigin="anonymous"/>
+      <img class="lazyload" alt="${restaurant.name}"
+      data-src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" crossorigin="anonymous"/>
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
@@ -65,14 +66,14 @@ const createSkeletonRestaurantItemTemplate = (count) => {
   for (let i = 0; i < count; i += 1) {
     template += `
    <div class="card" tabindex="0">
-    <figure class="restaurant-image"">
-      <img alt="image skeleton" src="./images/placeholder.png" width="100%" crossorigin="anonymous"/>
+    <figure class="restaurant-image">
+      <img alt="image skeleton" src="./images/placeholder.png" crossorigin="anonymous"/>
     </figure>
     <div class="card-content">
       <h3 class="card-title" tabindex"0">
-        <a class="card-link">
+        <p>
           Lorem ipsum dolor sit amet consectetur.
-        </a>
+        </p>
       </h3>
       <div class="rating" tabindex="0">
         <span class="iconify iconify-star" data-icon="bi:star-fill" data-inline="false"></span>

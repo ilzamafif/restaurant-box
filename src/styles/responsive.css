@@ -1,8 +1,8 @@
 @media screen and (max-width: 505px) {
   nav {
-    z-index: 10;
-    background-color: var(--color-secondary);
-    width: 100%;
+    z-index: 9;
+    background-color: var(--color-white);
+    width: 300px;
     top: 0;
     height: 100vh;
     position: fixed;
@@ -35,6 +35,18 @@
   .nav-list .nav-item a {
     color: var(--color-text);
   }
+
+  error-message h1,
+  favorite-message h1 {
+    color: var(--color-text);
+    font-size: 20px;
+  }
+
+  error-message p,
+  favorite-message p {
+    color: var(--color-text);
+    font-size: 14px;
+  }
 }
 
 @media screen and (min-width: 506px) {
@@ -52,76 +64,82 @@
   }
 
   #posts .card {
-    width: 390px;
+    width: 310px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .hero{
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0)), url("/images/hero-large.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .nav-list .nav-item{
-    width: 20%;
+    font-size: 16px;
   }
 
-  .hero{
-     background-image: url("/images/hero-large.jpg");
+  .hero-inner h1.hero-title {
+    font-size: 4rem;
   }
 
-  .hero__title {
-    font-size: 2.5rem;
+  .hero-inner p.hero-tagline {
+    font-size: 1.3rem;
   }
 
-  .hero__inner .hero__title {
-    font-size: 3.8rem;
+  .restaurant-content .list-label{
+    margin-top: 30px;
+    font-size: 45px;
   }
 
-  .hero__tagline {
-    font-weight: 300;
-    font-size: 1rem;
-    margin-bottom: 30px;
+  .card-detail .restaurant-image img{
+    width: 760px;
   }
 
-  .review .review-container{
+  .restaurant-detail-content .restaurant-detail{
+    flex: 1;
+  }
+
+  .restaurant-detail .restaurant-desc {
+    font-size: 1.1rem;
+  }
+
+  .card-detail .review .review-title{
+    margin: 70px 0 40px 0;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .card-detail .review .review-container{
     grid-template-columns: 1fr 1fr;
   }
-
-  #posts .card {
-    width: 310px;
-  }
-
 }
 
 @media screen and (min-width: 900px) {
-  .hero__title {
+  .nav-item {
+    width: 15%;
+  }
+
+  .hero-inner .hero-title {
     font-size: 3rem;
   }
 
-  #posts-detail {
-    margin: 0 10%;
-    grid-template-columns: repeat(1, 2fr);
-  }
-
-  .detail-restaurant-content .list__label{
-    margin: 20px 0;
-    padding-left: 14%;
-    font-size: 30px;
-  }
-
-  .review .review-container{
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #posts .card {
-    width: 300px;
+  .card-detail .review .review-container{
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media screen and (min-width: 1024px) {
-
-  #posts-detail {
-    margin: 0 10%;
-    grid-template-columns: repeat(1, 2.5fr);
+ .nav-item {
+    width: 13%;
   }
 
-  .review .review-container{
+  .restaurant-content{
+    max-width: 1200px;
+    margin: 0 autq;
+  }
+
+  .card-detail .review .review-container{
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
