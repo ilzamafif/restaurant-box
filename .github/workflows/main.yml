@@ -14,10 +14,12 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@master
-      - name: Install dependencies
+      - name: Install 
         run: npm install
       - name: Build dependencies
-        run: npm run build && exit
+        run: npm run build
+      - name: Build image
+        run: npm run build-imaage
       - name: Archive production artifact
         uses: actions/upload-artifact@master
         with:
