@@ -5,8 +5,10 @@ class FooterBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    <footer class="footer" tabindex="0">
-      <p>Copyright &copy;2021 | Restaurant Box</p>
+    <footer>
+      <div class="footer" tabindex="0">
+        <p>Copyright &copy;2021 | Restaurant Box</p>
+      </div>
     </footer>
     `;
   }

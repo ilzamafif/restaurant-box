@@ -6,9 +6,9 @@ class HeroCustom extends HTMLElement {
   render() {
     this.innerHTML = `
       <div class="hero">
-        <div tabindex="0" class="hero__inner">
-          <h1 class="hero__title">Explore the restaurant</h1>
-          <div class="hero__tagline">You will feel pleasure that you have never felt</div>
+        <div tabindex="0" class="hero-inner">
+          <h1 class="hero-title">Wisata Kuliner <span>Favorit</span> di <span>Indonesia</span></h1>
+          <p class="hero-tagline">Restaurant Box menyediakan katalog tempat nongkrong terbaik di Indonesia</p>
         </div>
       </div>
     `;

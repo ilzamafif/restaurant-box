@@ -8,8 +8,8 @@ const Detail = {
   async render() {
     return `
         <section class="detail-restaurant-content">
-          <h2 class="list__label" tabindex="0">Detail Restourant</h2>
-          <div id='posts-detail'></div>
+          <h2 class="detail-label" tabindex="0">Detail Restourant</h2>
+          <div id='detail-posts'></div>
           <div id='likeButtonContainer'></div>
         </section>
     `;
@@ -18,7 +18,7 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const data = await RestaurantSource.detailRestaurant(url.id);
-    const restaurantContainer = document.querySelector('#posts-detail');
+    const restaurantContainer = document.querySelector('#detail-posts');
 
     restaurantContainer.innerHTML += createRestaurantDetailTemplate(data.restaurant);
 

@@ -7,7 +7,7 @@ class Navigatorbar extends HTMLElement {
     this.innerHTML = `
       <div class="container">
         <div class="navbar-brand">
-          <a href="#/home" class="navbar-brand-logo">RB</a>
+          <a href="#/home" class="navbar-brand-logo">Resto Box</a>
         </div>
         <button id="menu" tabindex="0" class="bars-toggler" aria-label="click to show navbar">
           <span class="iconify" data-icon="la:bars" data-inline="false"></span>

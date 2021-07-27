@@ -7,7 +7,7 @@ class ErrorMessage extends HTMLElement {
     this.innerHTML = `
       <div>
         <h1>Gagal memuat konten!</h1>
-        <p class="favorite-page-message">Silahkan refresh kembali halaman</p>
+        <p class="error-page-message">Silahkan refresh kembali halaman</p>
       </div>
     `;
   }
